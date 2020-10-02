@@ -12,6 +12,10 @@ app.get("/players", (req, res) => {
   console.log("this is a test for the players route");
 });
 
+app.post("/post", (req, res) => {
+  console.log(req.body);
+});
+
 app.listen(port, () => {
   console.log(`example app is listenining port ${port}`);
 });
