@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const importData = require('./data.json')
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 8080;
 
 app.get("/", (req,res) => res.send('hello world!') )
 app.get("/players", (req,res) => res.send(importData) )
