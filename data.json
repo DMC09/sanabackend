@@ -1,0 +1,5 @@
+[
+  { "name": "Lebron James", "team": "Los Angeles Lakers", "ppg": 25 },
+  { "name": "Kawhi Leonard", "team": "Los Angeles Clippers", "ppg": 27 },
+  { "name": "Brandon Ingram", "team": "New Orleans Pelicans", "ppg": 24 }
+]
