@@ -413,12 +413,10 @@ app.post('/post', (req, res) => {
     res.send(500)
     } else {
       console.log(`email sent to ${email}` );
-      res.send(200)
-      console.log(info + info.response);
+      res.send(200).res.json({ username: 'Flavio' })
+      console.log info.response);
     }
 })
-
-console.log('message was sent!');
 })
 
 
