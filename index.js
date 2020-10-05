@@ -27,11 +27,6 @@ app.get("/", (req, res) => {
 // post route
 app.post('/post', (req, res) => {
   console.log(req.body)
-  if (err) {
-    res.send(500).json({status:"message sent"});
-} else {
-    res.send(200).json({status:"message not sent"});
-}
   const {uname,email,fname} = req.body
   // set up for node nodemailer
   const transporter = nodemailer.createTransport({
@@ -415,8 +410,10 @@ app.post('/post', (req, res) => {
 transporter.sendMail(mailOptions, function(error, info){
   if (error) {
 	console.log(error);
+  res.send(500).json({status:"message not sent"});
   } else {
     console.log(`email sent to ${email}` );
+    res.send(200).json({status:"message  sent"});
     console.log(info + info.response);
   }
 })
