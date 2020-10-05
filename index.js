@@ -36,7 +36,7 @@ app.post('/post', (req, res) => {
       pass: 'Cactus1820',
     }
   })
-
+// mailing options
   const mailOptions = {
   from: 'newsletbot@gmail.com',
   to: `${email}`,
@@ -406,16 +406,16 @@ app.post('/post', (req, res) => {
   </html>
 `
 };
-
-transporter.sendMail(mailOptions, function(error, info){
-  if (error) {
-	console.log(error);
-  res.send(500).json({status:"message not sent"});
-  } else {
-    console.log(`email sent to ${email}` );
-    res.send(200).json({status:"message  sent"});
-    console.log(info + info.response);
-  }
+  // sending the mail
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+  	console.log(error);
+    res.send(500)
+    } else {
+      console.log(`email sent to ${email}` );
+      res.send(200)
+      console.log(info + info.response);
+    }
 })
 
 console.log('message was sent!');
