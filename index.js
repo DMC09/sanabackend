@@ -3,7 +3,6 @@ const express = require("express");
 const cors = require('cors')
 const bodyParser = require('body-parser');
 const nodemailer = require("nodemailer");
-const importData = require("./data.json");
 let port = process.env.PORT || 8080;
 
 //set up /middleware
@@ -28,6 +27,11 @@ app.get("/", (req, res) => {
 // post route
 app.post('/post', (req, res) => {
   console.log(req.body)
+  if (err) {
+    res.send(500).json({status:"message sent"});
+} else {
+    res.send(200).json({status:"message not sent"});
+}
   const {uname,email,fname} = req.body
   // set up for node nodemailer
   const transporter = nodemailer.createTransport({
@@ -419,12 +423,6 @@ transporter.sendMail(mailOptions, function(error, info){
 
 console.log('message was sent!');
 })
-
-
-app.get("/players", (req, res) => {
-  res.send(importData);
-  console.log("this is a test for the players route");
-});
 
 
 app.listen(port, () => {
