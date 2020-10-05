@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 // post route
 app.post('/post', (req, res) => {
   console.log(req.body)
-  const {uname,email,fname} = req.body
+  const {fname,email,uname} = req.body
   // set up for node nodemailer
   const transporter = nodemailer.createTransport({
     service: 'gmail',
