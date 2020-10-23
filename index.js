@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 app.use(cors())
 // dotenv.config();
 app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", '*');
+    res.header("Access-Control-Allow-Origin", 'https://sana-beta.netlify.app');
     res.header("Access-Control-Allow-Credentials", true);
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
     res.header("Access-Control-Allow-Headers", 'Origin,X-Requested-With,Content-Type,Accept,content-type,application/json');
@@ -255,7 +255,7 @@ app.post('/post', (req, res) => {
   <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 25px; padding-left: 25px; padding-top: 10px; padding-bottom: 20px; font-family: Tahoma, sans-serif"><![endif]-->
   <div style="color:#555555;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;line-height:1.2;padding-top:10px;padding-right:25px;padding-bottom:20px;padding-left:25px;">
   <div style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: 14px;">
-  <p style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">Sana is a brand-new streaming service that aims to serve you the highest quality audio with no ads! Thank for you signing up for the beta. Click the button below to confirm your access and start streaming your favorite music today.</p>
+  <p style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">Thank for you signing up for the beta! Sana is a brand-new streaming service that allows you to stream the highest quality music with no ads. Click the button below to confirm your access and start streaming your favorite music today.</p>
   </div>
   </div>
   <!--[if mso]></td></tr></table><![endif]-->
@@ -267,7 +267,7 @@ app.post('/post', (req, res) => {
   <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 25px; padding-left: 25px; padding-top: 20px; padding-bottom: 10px; font-family: Tahoma, sans-serif"><![endif]-->
   <div style="color:#555555;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;line-height:1.2;padding-top:20px;padding-right:25px;padding-bottom:10px;padding-left:25px;">
   <div style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: 14px;">
-  <p style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">Since Sana is still in the Beta, not everything will be perfect yet.But with your help we can change that. Please report all feedback through the development team at <span style="color: #ee982b;">SanaDevTeam@gmail.com</span>.</p>
+  <p style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;">Since Sana is still in the beta, not everything is perfect. But with your help we can change that. Please report all feedback to the development team at <span style="color: #ee982b;">SanaDevTeam@gmail.com</span>.</p>
   </div>
   </div>
   <!--[if mso]></td></tr></table><![endif]-->
