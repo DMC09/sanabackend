@@ -34,8 +34,8 @@ app.post('/post', (req, res) => {
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: 'newsletbot@gmail.com',
-      pass: 'Q6asd0XPDRUKMfA8',
+      user: process.env.USERNAME,
+      pass: process.env.PASSWORD,
     },
   })
 // mailing options
