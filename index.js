@@ -30,9 +30,9 @@ app.post('/post', (req, res) => {
   const {fname,email,uname} = req.body
   // set up for node nodemailer
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'SendPulse',
     auth: {
-      user: 'newsletbot@gmail.com' ,
+      user: 'newsletbot@gmail.com',
       pass: 'Cactus1820',
     }
   })
