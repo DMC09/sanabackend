@@ -30,11 +30,13 @@ app.post('/post', (req, res) => {
   const {fname,email,uname} = req.body
   // set up for node nodemailer
   const transporter = nodemailer.createTransport({
-    service: 'SendPulse',
+    host: "smtp-relay.sendinblue.com",
+    port: 587,
+    secure: false, // true for 465, false for other ports
     auth: {
       user: 'newsletbot@gmail.com',
       pass: 'Cactus1820',
-    }
+    },
   })
 // mailing options
   const mailOptions = {
