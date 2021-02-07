@@ -1,17 +1,29 @@
 "use strict";
 const express = require("express");
-const cors = require('cors')
+const cors = require('cors');
+const axios = require('axios');
 const bodyParser = require('body-parser');
 const nodemailer = require("nodemailer");
 let port = process.env.PORT || 8080;
 
 //set up /middleware
 const app = express();
+const endpoint = `https://api.sportradar.us/nba/trial/v7/en/seasons/2020/REG/leaders.json?api_key=${REACT_APP_KEY}`
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 app.use(cors())
 // dotenv.config();
 app.use(function(req, res, next) {
+
+   function getData() {
+    try {
+      console.log('attempting to hit endpoint');
+      const response = await axios.get(endpoint);
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  }
     res.header("Access-Control-Allow-Origin", 'https://sana-beta.netlify.app');
     res.header("Access-Control-Allow-Credentials", true);
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
